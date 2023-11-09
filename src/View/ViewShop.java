@@ -15,6 +15,7 @@ public class ViewShop extends javax.swing.JFrame {
      */
     public ViewShop() {
         initComponents();
+//        this.filll
     }
 
     /**
