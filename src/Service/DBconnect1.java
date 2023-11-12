@@ -17,7 +17,11 @@ import java.util.logging.Logger;
  */
 public class DBconnect1 {
     private static final String USERNAME = "sa";
+<<<<<<< HEAD
     private static final String PASSWORD = "puddingvux";
+=======
+    private static final String PASSWORD = "123456";
+>>>>>>> 495c5a9e2f6e6a1daeb1ff4d2a8d8c8e34f60ea0
     private static final String SERVER = "localhost";
     private static final String PORT = "1433";
     private static final String DATABASE_NAME = "qlcuahanggiaydb";
