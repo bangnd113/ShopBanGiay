@@ -49,13 +49,68 @@ public class KhuyenMaiService implements InF_KhuyenMai {
 
     @Override
     public int add(KhuyenMai khuyenMai) {
+        sql = "Insert into tblkhuyenmai(MaKM, TenChuongTrinh, DieuKien, NgayBatDau,NgayKetThuc, Mota, MucKhuyenMai) Values(?,?,?,?,?,?,?)";
+        try {
+            con = DBconnect1.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.setObject(1, khuyenMai.getMaKM());
+            ps.setObject(2, khuyenMai.getTenKM());
+            ps.setObject(3, khuyenMai.getDieuKien());
+            ps.setObject(4, khuyenMai.getNgayBatDau());
+            ps.setObject(5, khuyenMai.getNgayKetThuc());
+            ps.setObject(6, khuyenMai.getMoTa());
+            ps.setObject(7, khuyenMai.getMucKhuyenMai());
+            return ps.executeUpdate();
 
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
+
+    }
+
+    public KhuyenMai getKM(String MaKM) {
+        sql = "select * from tblkhuyenmai where MaKM=?";
+        KhuyenMai khuyenMai = null;
+        try {
+            con = DBconnect1.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.setObject(1, MaKM);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                khuyenMai = new KhuyenMai(rs.getString(1), rs.getString(2),
+                        rs.getString(3), rs.getDate(4),
+                        rs.getDate(5), rs.getString(6), rs.getString(7));
+
+            }
+            return khuyenMai;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     @Override
     public int update(KhuyenMai khuyenMai, String MaKM) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        sql = "Update tblkhuyenmai set MaKM=?,TenChuongTrinh=?, DieuKien=?, NgayBatDau=?,NgayKetThuc=?, Mota=?, MucKhuyenMai=? where MaKM=?";
+        try {
+            con = DBconnect1.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.setObject(1, khuyenMai.getMaKM());
+            ps.setObject(2, khuyenMai.getTenKM());
+            ps.setObject(3, khuyenMai.getDieuKien());
+            ps.setObject(4, khuyenMai.getNgayBatDau());
+            ps.setObject(5, khuyenMai.getNgayKetThuc());
+            ps.setObject(6, khuyenMai.getMoTa());
+            ps.setObject(7, khuyenMai.getMucKhuyenMai());
+            ps.setObject(8, MaKM);
+            return ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        }
     }
 
 }

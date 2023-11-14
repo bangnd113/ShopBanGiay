@@ -20,6 +20,7 @@ public class ViewNhanVien extends javax.swing.JFrame {
      */
     public ViewNhanVien() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -32,31 +33,34 @@ public class ViewNhanVien extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel4 = new javax.swing.JPanel();
-        JLNhanVien = new javax.swing.JLabel();
-        JLBackNV = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        BackNV = new javax.swing.JLabel();
+        lblLoGo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel4.setBackground(new java.awt.Color(255, 204, 255));
+        jPanel4.setBackground(new java.awt.Color(183, 151, 104));
 
-        JLNhanVien.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        JLNhanVien.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JLNhanVien.setText("ViewNhanVien");
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Quản lý nhân viên");
 
-        JLBackNV.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        JLBackNV.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JLBackNV.setText("Back");
-        JLBackNV.addMouseListener(new java.awt.event.MouseAdapter() {
+        BackNV.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        BackNV.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BackNV.setText("Back");
+        BackNV.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                JLBackNVMouseClicked(evt);
+                BackNVMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                JLBackNVMouseEntered(evt);
+                BackNVMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                JLBackNVMouseExited(evt);
+                BackNVMouseExited(evt);
             }
         });
+
+        lblLoGo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/logo.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -64,19 +68,23 @@ public class ViewNhanVien extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(JLBackNV, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BackNV, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(301, 301, 301)
-                .addComponent(JLNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(467, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 275, Short.MAX_VALUE)
+                .addComponent(lblLoGo))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JLNhanVien, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JLBackNV, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(44, Short.MAX_VALUE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BackNV, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(lblLoGo)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -89,30 +97,30 @@ public class ViewNhanVien extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 530, Short.MAX_VALUE))
+                .addGap(0, 541, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JLBackNVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JLBackNVMouseClicked
-        ViewShop view = new ViewShop();
-        view.setVisible(true);
-        view.pack();
-        view.setLocationRelativeTo(null);
-        view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    private void BackNVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackNVMouseClicked
+        HomForm1 form1 = new HomForm1();
+        form1.setVisible(true);
+        form1.pack();
+        form1.setLocationRelativeTo(null);
+        form1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.dispose();
-    }//GEN-LAST:event_JLBackNVMouseClicked
+    }//GEN-LAST:event_BackNVMouseClicked
 
-    private void JLBackNVMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JLBackNVMouseEntered
-        JLBackNV.setLayout(new BorderLayout(10, 10));
-        JLBackNV.setBorder(BorderFactory.createEtchedBorder(Color.black, Color.black));
-    }//GEN-LAST:event_JLBackNVMouseEntered
+    private void BackNVMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackNVMouseEntered
+        BackNV.setLayout(new BorderLayout(10, 10));
+        BackNV.setBorder(BorderFactory.createEtchedBorder(Color.black, Color.black));
+    }//GEN-LAST:event_BackNVMouseEntered
 
-    private void JLBackNVMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JLBackNVMouseExited
-        JLBackNV.setLayout(null);
-        JLBackNV.setBorder(null);
-    }//GEN-LAST:event_JLBackNVMouseExited
+    private void BackNVMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackNVMouseExited
+        BackNV.setLayout(null);
+        BackNV.setBorder(null);
+    }//GEN-LAST:event_BackNVMouseExited
 
     /**
      * @param args the command line arguments
@@ -150,8 +158,9 @@ public class ViewNhanVien extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel JLBackNV;
-    private javax.swing.JLabel JLNhanVien;
+    private javax.swing.JLabel BackNV;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lblLoGo;
     // End of variables declaration//GEN-END:variables
 }

@@ -31,88 +31,95 @@ public class ViewThongKe extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel4 = new javax.swing.JPanel();
-        JLThongKe = new javax.swing.JLabel();
-        JLBackTK = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        BackThongKe = new javax.swing.JLabel();
+        lblLoGo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel4.setBackground(new java.awt.Color(255, 204, 255));
+        jPanel5.setBackground(new java.awt.Color(183, 151, 104));
 
-        JLThongKe.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        JLThongKe.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JLThongKe.setText("Thống kê");
+        jLabel9.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("Thống kê");
 
-        JLBackTK.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
-        JLBackTK.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JLBackTK.setText("Back");
-        JLBackTK.addMouseListener(new java.awt.event.MouseAdapter() {
+        BackThongKe.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        BackThongKe.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BackThongKe.setText("Back");
+        BackThongKe.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                JLBackTKMouseClicked(evt);
+                BackThongKeMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                JLBackTKMouseEntered(evt);
+                BackThongKeMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                JLBackTKMouseExited(evt);
+                BackThongKeMouseExited(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        lblLoGo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/logo.jpg"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(JLBackTK, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BackThongKe, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(301, 301, 301)
-                .addComponent(JLThongKe, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(466, Short.MAX_VALUE))
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 278, Short.MAX_VALUE)
+                .addComponent(lblLoGo))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JLThongKe, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JLBackTK, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BackThongKe, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(lblLoGo)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 531, Short.MAX_VALUE))
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 544, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JLBackTKMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JLBackTKMouseClicked
-        ViewShop view = new ViewShop();
-        view.setVisible(true);
-        view.pack();
-        view.setLocationRelativeTo(null);
-        view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    private void BackThongKeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackThongKeMouseClicked
+        HomForm1 form1 = new HomForm1();
+        form1.setVisible(true);
+        form1.pack();
+        form1.setLocationRelativeTo(null);
+        form1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.dispose();
-    }//GEN-LAST:event_JLBackTKMouseClicked
+    }//GEN-LAST:event_BackThongKeMouseClicked
 
-    private void JLBackTKMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JLBackTKMouseEntered
-        JLBackTK.setLayout(new BorderLayout(10, 10));
-        JLBackTK.setBorder(BorderFactory.createEtchedBorder(Color.black, Color.black));
-    }//GEN-LAST:event_JLBackTKMouseEntered
+    private void BackThongKeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackThongKeMouseEntered
+        BackThongKe.setLayout(new BorderLayout(10, 10));
+        BackThongKe.setBorder(BorderFactory.createEtchedBorder(Color.black, Color.black));
+    }//GEN-LAST:event_BackThongKeMouseEntered
 
-    private void JLBackTKMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JLBackTKMouseExited
-        JLBackTK.setLayout(null);
-        JLBackTK.setBorder(null);
-    }//GEN-LAST:event_JLBackTKMouseExited
+    private void BackThongKeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackThongKeMouseExited
+        BackThongKe.setLayout(null);
+        BackThongKe.setBorder(null);
+    }//GEN-LAST:event_BackThongKeMouseExited
 
     /**
      * @param args the command line arguments
@@ -150,8 +157,9 @@ public class ViewThongKe extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel JLBackTK;
-    private javax.swing.JLabel JLThongKe;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel BackThongKe;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel lblLoGo;
     // End of variables declaration//GEN-END:variables
 }
