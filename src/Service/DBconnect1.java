@@ -17,10 +17,10 @@ import java.util.logging.Logger;
  */
 public class DBconnect1 {
     private static final String USERNAME = "sa";
-    private static final String PASSWORD = "bang0565350162";
+    private static final String PASSWORD = "123456";
     private static final String SERVER = "localhost";
     private static final String PORT = "1433";
-    private static final String DATABASE_NAME = "qlcuahanggiaydb";
+    private static final String DATABASE_NAME = "qlbangiay";
     private static final boolean USING_SSL = false;
    
     private static String CONNECT_STRING;

@@ -17,9 +17,10 @@ import javax.swing.JOptionPane;
  * @author ducviet
  */
 public class ViewLogin2 extends javax.swing.JFrame {
-    private static String urlDB = "jdbc:sqlserver://localhost:1433;databaseName=qlcuahanggiaydb";
+
+    private static String urlDB = "jdbc:sqlserver://localhost:1433;databaseName=qlbangiay";
     private static String usersName = "sa";
-    private static String password = "bang0565350162";
+    private static String password = "123456";
 
     public ViewLogin2() {
         initComponents();
@@ -210,31 +211,24 @@ public class ViewLogin2 extends javax.swing.JFrame {
                     System.out.println("Connect to database ....");
                     Connection conn = DriverManager.getConnection(urlDB, usersName, password);
                     Statement stm = conn.createStatement();
-                    String sql = "SELECT *FROM tbltaikhoan";
+                    String sql = "SELECT TKNV, MatKhau FROM TaiKhoan";
                     ResultSet rs = stm.executeQuery(sql);
 
                     String user, pass, role;
                     boolean flag = false;//Khai báo một biến boolean flag để kiểm tra xem có tìm thấy username
                     //và password khớp với người dùng nhập hay không. Ban đầu gán flag = false.
                     while (rs.next()) {
-                        user = rs.getString("tendangnhap");
-                        pass = rs.getString("matkhau");
-                        if (user.equals(txtPass.getText()) && pass.equals(txtPass.getText())) {
+                        user = rs.getString(1);
+                        pass = rs.getString(2);
+                        if (user.equals(txtEmail.getText()) && pass.equals(txtPass.getText())) {
                             flag = true;
-                            role = rs.getString("capbac");
-                            if (role.equals("1")) {
-                                JOptionPane.showMessageDialog(this, "Đăng nhập thành công !", "Thông báo ", 0);
-                                HomForm1 form1 = new HomForm1();
-                                form1.setVisible(true);
-                                dispose();
-                                return;
-                            } else if (role.equals("2")) {
-                                JOptionPane.showMessageDialog(this, "Đăng nhập thành công !", "Thông báo ", 0);
-                                HomForm1 form1 = new HomForm1();
-                                form1.setVisible(true);
-                                dispose();
-                                return;
-                            }
+                            JOptionPane.showMessageDialog(this, "Đăng nhập thành công!");
+                            ToanCuc tt = new ToanCuc();//biến toàn cục dữ liệu setUserTKNV sẽ đc public 
+                            tt.setUserTKNV(txtEmail.getText());
+                            HomForm1 form1 = new HomForm1();
+                            form1.setVisible(true);
+                            dispose();
+                            return;
                         }
                     }
                     if (!flag == true) {
@@ -253,6 +247,7 @@ public class ViewLogin2 extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Đăng nhập thất bại !");
             return;
         }
+
     }//GEN-LAST:event_btnSinginActionPerformed
 
     /**
