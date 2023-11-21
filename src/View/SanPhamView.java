@@ -259,11 +259,14 @@ public class SanPhamView extends javax.swing.JFrame {
 
         txtTimKiem.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         txtTimKiem.setText("Tìm kiếm ở đây...");
+<<<<<<< HEAD
         txtTimKiem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTimKiemActionPerformed(evt);
             }
         });
+=======
+>>>>>>> 6803a462588bfc8f3e83a0dc7c77e1354390d8a1
         txtTimKiem.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtTimKiemKeyPressed(evt);
@@ -523,10 +526,13 @@ public class SanPhamView extends javax.swing.JFrame {
         hienThiThuocTinh(4);
     }//GEN-LAST:event_rdTenNSXMouseClicked
 
+<<<<<<< HEAD
     private void txtTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTimKiemActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTimKiemActionPerformed
 
+=======
+>>>>>>> 6803a462588bfc8f3e83a0dc7c77e1354390d8a1
     /**
      * @param args the command line arguments
      */

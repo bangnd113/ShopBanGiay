@@ -222,13 +222,29 @@ public class ViewLogin2 extends javax.swing.JFrame {
                         pass = rs.getString(2);
                         if (user.equals(txtEmail.getText()) && pass.equals(txtPass.getText())) {
                             flag = true;
+<<<<<<< HEAD
                             JOptionPane.showMessageDialog(this, "Đăng nhập thành công!");
                             ToanCuc tt = new ToanCuc();//biến toàn cục dữ liệu setUserTKNV sẽ đc public 
                             tt.setUserTKNV(txtEmail.getText());
+=======
+//                            role = rs.getString("capbac");
+//                            if (role.equals("1")) {
+//                                JOptionPane.showMessageDialog(this, "Đăng nhập thành công !", "Thông báo ", 0);
+//                                HomForm1 form1 = new HomForm1();
+//                                form1.setVisible(true);
+//                                dispose();
+//                                return;
+//                            } else if (role.equals("2")) {
+                            JOptionPane.showMessageDialog(this, "Đăng nhập thành công!");
+>>>>>>> 6803a462588bfc8f3e83a0dc7c77e1354390d8a1
                             HomForm1 form1 = new HomForm1();
                             form1.setVisible(true);
                             dispose();
                             return;
+<<<<<<< HEAD
+=======
+//                            }
+>>>>>>> 6803a462588bfc8f3e83a0dc7c77e1354390d8a1
                         }
                     }
                     if (!flag == true) {

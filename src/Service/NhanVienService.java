@@ -104,13 +104,20 @@ public class NhanVienService {
             return 0;
         }
     }
+<<<<<<< HEAD
 //public List<NhanVien> findSP(String maNV) {
 //        sql = "Select * from NhanVien where TKNV = ? ";
 //        List<NhanVien> listsp = new ArrayList<>();
+=======
+//    public int Sua(NhanVien nv, String maNV) {
+//        sql = "update tblnhanvien set HoTen=?,GioiTinh=?,DiaChi=?,DienThoai=?,"
+//                + "Email=?,Luong=?,ChucVu=?,TrangThai=? where MaNV=?";
+>>>>>>> 6803a462588bfc8f3e83a0dc7c77e1354390d8a1
 //        try {
 //            con = DBconnect1.getConnection();
 //            ps = con.prepareStatement(sql);
 //            ps.setObject(1, maNV);
+<<<<<<< HEAD
 //            rs = ps.executeQuery();
 //            while (rs.next()) {
 //                NhanVien sp = new NhanVien(
@@ -131,6 +138,20 @@ public class NhanVienService {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //            return null;
+=======
+//            ps.setObject(2, nv.getHoTen());
+//            ps.setObject(3, nv.getGioiTinh());
+//            ps.setObject(4, nv.getDiaChi());
+//            ps.setObject(5, nv.getSDT());
+//            ps.setObject(6, nv.getEmail());
+//            ps.setObject(7, nv.getLuong());
+//            ps.setObject(8, nv.getChucVu());
+//            ps.setObject(9, nv.getTrangThai());
+//            return ps.executeUpdate();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            return 0;
+>>>>>>> 6803a462588bfc8f3e83a0dc7c77e1354390d8a1
 //        }
 //    }
 }
